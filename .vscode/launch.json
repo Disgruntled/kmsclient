@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Encrypt a File",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "program": "${file}",
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+                "RedirectOutput"
+            ],
+            "args": [
+                "--encrypt" ,
+                "-i sacrifice.txt",
+                "-o sacrifice_pad.txt.enc" 
+            ],
+        },
+        {
+            "name": "Decrypt a File",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": true,
+            "program": "${file}",
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "envFile": "${workspaceFolder}/.env",
+            "debugOptions": [
+                "RedirectOutput"
+            ],
+            "args": [
+                "--decrypt" ,
+                "-o sacrifice_return.txt",
+                "-i sacrifice_pad.txt.enc" 
+            ],
+        }
+    ]
+}

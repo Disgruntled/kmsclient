@@ -1,0 +1,5 @@
+google-api-python-client
+gcloud
+pycryptodome
+google-auth
+google-auth-httplib2
